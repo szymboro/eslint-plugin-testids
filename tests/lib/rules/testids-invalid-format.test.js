@@ -9,6 +9,7 @@ ruleTester.run('validate-data-testid-format', rule, {
   valid: [
     'html`<button data-testid="add--button--click">Click Me</button>`',
     'html`<input data-testid="add--input--field" type="text" />`',
+    'html`<input data-testid="add--input--${id}" type="text" />`',
   ],
   invalid: [
     {
