@@ -70,6 +70,19 @@ You can add what tags should it check just add settings to eslint config (If not
 }
 ```
 
+You can customize pattern used for recognizing data-testid valid format:
+You can add what tags should it check just add settings to eslint config (If not provided it will use default config):
+
+```json
+"settings": {
+  "testIdPattern": {
+    testIdPattern: /^([a-z0-9-]+)--([a-z0-9-]+)(--\${([a-z0-9-]+)})?$/,
+    // Default is xx--xx--xx/${xx}
+    // cd--button--test
+  }
+}
+```
+
 ## Rules
 
 ```json
